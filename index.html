@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./liniyni/1task.html">Перша задача</a>  
+    <a href="./liniyni/2task.html">Друга задача</a> 
+    <a href="./liniyni/3task.html">Третя задача</a> 
+    <a href="./liniyni/4task.html">Четверта задача</a>
+    <a href="./liniyni/5task.html">П'ята задача</a>
+// ПЕРША ЗАДАЧА Обчислити площу та периметр прямокутника, довжини сторін якого задаються.
+// let rectSideA = parseFloat(prompt('Сторона прямокутника №=1'));
+// let rectSideB = parseFloat(prompt('Сторона прямокутника №=2'));
+
+// let pRectangle = 2 * rectSideA + 2 * rectSideB;
+
+// document.write(`Периметр прямокутника = ${pRectangle}`);
+
+//ДРУГА ЗАДАЧА  Дано (вводиться з клавіатури) кількість кілограмів помідорів та вартість одиниці.
+
+// let a = parseInt(prompt('Кільість кілограм помідорів'));
+// let b = parseInt(prompt('Вартість за 1 кг'));
+// let c = a * b;
+// document.write(`Кінцева вартість = ${c} грн`);
+
+//ТРЕТЯ ЗАДАЧА З клавіатури вводиться арендна плата за квартиру (за 1 місяць). Визначити скільки треба заплатити за 1 рік, за 2 роки та 10 років.
+
+// let monthRent = parseFloat(prompt('Орендна плата за місяць'));
+// let userMoney = parseFloat(prompt('Кількість грошей користувача'));
+// let howLongCanULive = Math.floor(userMoney / monthRent);
+
+// document.write(
+//   `Скільки повних місяців ви зможете прожити місяців ви зможете прожити = ${howLongCanULive}`
+// );
+
+// Четверта задача Користувач хоче клеїти шпалери на стіну. Дано розміри стіни (довжина і висота) та розмір двох вікон. Визначити, скільки м2 шпалер потрібно купити користувачу.
+
+// let wallWidth = parseFloat(prompt('Ширина стіни (в метрах)'));
+// let wallHeight = parseFloat(prompt('Висота стіни (в метрах)'));
+// let twoWindowsSize = parseFloat(
+//   prompt('Розміри двох вікон (в метрах квадратних)')
+// );
+// let userMNeedToBuy = Math.floor(wallWidth * wallHeight - twoWindowsSize);
+// document.write(`Скільки квадратеих метрів потрібно купити = ${userMNeedToBuy}`);
+
+// П'ята задача Уряд планує підвищити тарифи на газ на 23% і 15% на електроенергію. На скільки гривень зросте абонентна плата при вказаних об’ємах споживання (Х кубів газу, Y кіловат електроенергії)?
+
+let gasPrice = parseFloat(prompt('Тариф газу за один куб'));
+let userGasUsed = parseFloat(
+  prompt('Введіть кількість кубів використаних користувачем')
+);
+let electricPrice = parseFloat(prompt('Тариф електроенергії за один кіловат'));
+let userElectricUsed = parseFloat(
+  prompt('Введіть кількість кіловат використаних користувачем')
+);
+let gasMonthPriceWithoutChanges = Math.round(userGasUsed * gasPrice);
+let gasMonthPrice = Math.round(userGasUsed * (gasPrice / 0.77));
+let change1 = gasMonthPrice - gasMonthPriceWithoutChanges;
+let electricMonthPriceWithoutChanges = Math.round(
+  userElectricUsed * electricPrice
+);
+let electricMonthPrice = Math.round(userElectricUsed * (electricPrice / 0.85));
+let change2 = electricMonthPrice - electricMonthPriceWithoutChanges;
+document.write(
+  `Скільки ви заплатите без урахування змін в тарифі ${gasMonthPriceWithoutChanges} </br>`
+);
+document.write(
+  `Скільки ви заплатите з урахуванням збільшення тарифів ${gasMonthPrice} </br>`
+);
+document.write(`Різниця ${change1} </br>`);
+document.write(
+  `Скільки ви заплатите без урахування змін в тарифі ${electricMonthPriceWithoutChanges} </br>`
+);
+document.write(
+  `Скільки ви заплатите з урахуванням збільшення тарифів ${electricMonthPrice} </br>`
+);
+document.write(`Різниця в ${change2}`);
+
+  </body>
+</html>
